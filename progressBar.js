@@ -1,4 +1,3 @@
-//data structure, fake backend
 
 class Card {
     constructor(word , image, mode){
@@ -24,26 +23,12 @@ class Word{
 };
 
 const apple = new Word('Maçã', 'Apple');
-const pear = new Word('Pêra', 'Pear');
 const appleCard = new Card(apple, 'https://source.unsplash.com/150x150/?apple', 'en-pt');
-const pearCard = new Card(pear, 'https://source.unsplash.com/150x150/?pear', 'en-pt')
-const newDeck = new Deck([appleCard, pearCard]);
+const newDeck = new Deck([appleCard]);
 
-console.log(apple);
-console.log(pear);
-console.log(newDeck);
-
-
-
-
-//DOM interactions\
-
-//onload
-
-const card = document.getElementsByClassName('card');
-//console.log({card});
 
 Document.onload = function(){
+    //Cards and decks
     console.log('startup');
     const translated = document.getElementsByClassName('translated-word');//ptWord
     const translating = document.getElementsByClassName('translating-word');//enWord
@@ -54,12 +39,40 @@ Document.onload = function(){
         translated[i].innerHTML = newDeck.deckCards[i].translatedWord;
         image[i].src = newDeck.deckCards[i].image;
     }
+
+    //progressBar
+    let button = document.getElementById('complete-lesson');
+    let numberOfLessons = 5;
+    let barCounter = numberOfLessons;
+    button.addEventListener('click', function(){
+        if(barCounter > 0){
+            const progressBarWidth = document.getElementById('progress-bar').offsetWidth;
+            let actualProgress = document.getElementById('actual-progress');
+            const percentageUnit = (progressBarWidth/numberOfLessons);
+            let sizeIncrease = actualProgress.offsetWidth + percentageUnit;
+            actualProgress.style.width = `${sizeIncrease}px`;
+            barCounter--;
+            if(barCounter === 0){
+                button.innerHTML = "YOU DID IT!";
+                button.style.backgroundColor = "#F9D649";
+            }
+            
+        }
     
-};
+    });
+}
 
-Document.onload();
 
 
+
+
+
+//DOM interactions\
+
+//onload
+
+const card = document.getElementsByClassName('card');
+//console.log({card});
 //card interactions behavior
 
 function updateCardBehaviour(card){
@@ -76,7 +89,8 @@ function updateCardBehaviour(card){
     }
 }
 
-//updateCardBehaviour(card);
+updateCardBehaviour(card);
+
 /*
 solution for one card
 const card = document.getElementById('card');
@@ -95,18 +109,6 @@ card.addEventListener('click', function(){
 
 //addCard
 
-document.getElementById('addCard').addEventListener('click', function(){
-    const frontInput = document.getElementById('front-input').value;
-    const backInput = document.getElementById('back-input').value;
-    const cardContainer = document.getElementById('card-container');
-    cardContainer.innerHTML += `<div class="card card-1">
-    <div class="card-front">
-        <img class="card-image" width=150 height=150 src="https://source.unsplash.com/150x150/?${frontInput}" />
-        <p class="translating-word">${frontInput}</p>
-    </div>
-        <div class="card-back isHidden">
-            <p class="translated-word">${backInput}</p>
-        </div>
-    </div>`;
-    updateCardBehaviour(card);//não é performatico pois atualiza a lista inteira
-});
+
+Document.onload();
+

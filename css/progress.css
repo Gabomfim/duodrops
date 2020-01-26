@@ -1,0 +1,98 @@
+#progress-bar{
+    width: 80%;
+    margin: 20px 10% 0 10%;
+    height: 8px;
+    background-color: #F1F1F1;
+    border-radius: 50px;
+}
+
+#actual-progress{
+    width: 0%;
+    height: 100%;
+    background-color: #F9D649;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+#complete-lesson{
+    display: block;
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    margin: 30px auto 0 auto;
+    background-color: #32CDFF;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    border: none;
+}
+
+#complete-lesson:hover{
+    background-color: #60C1ED;
+}
+
+
+body{
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+.card {
+    display: block;
+    margin: 120px auto 0 auto;
+    transition: 0.4s;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    padding: 50px 20px;
+    height: 200px;
+    width: 250px;
+}
+
+.card-image{
+    border-radius: 10px;
+}
+
+.card-shadow {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card-title{
+    font-size: 2em;
+}
+
+.card-image{
+    margin-bottom: 15px;
+}
+
+.translated-word{
+    font-size: 2em;
+    line-height: 1.2em;
+    padding: 30% 0;
+}
+
+.translating-word{
+    font-size: 2em;
+    line-height: 1.2em;
+    
+}
+
+.card-back{
+    transform: rotateY(180deg);
+}
+
+.rotated{
+    transform: rotateY(180deg);
+}
+
+.isHidden{
+    display: none;
+}
+
+/*.card-1:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}*/
