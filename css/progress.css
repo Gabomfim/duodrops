@@ -1,6 +1,12 @@
+#close{
+    position: absolute;
+    top:30px;
+    left:40px;
+}
+
 #progress-bar{
     width: 80%;
-    margin: 20px 10% 0 10%;
+    margin: 33px 10% 0 10%;
     height: 8px;
     background-color: #F1F1F1;
     border-radius: 50px;
@@ -14,7 +20,7 @@
     transition: 0.4s;
 }
 
-#complete-lesson{
+.button{
     display: block;
     height: 40px;
     width: 300px;
@@ -30,7 +36,7 @@
     border: none;
 }
 
-#complete-lesson:hover{
+.button:hover{
     background-color: #60C1ED;
 }
 
