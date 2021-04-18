@@ -2,15 +2,16 @@
 <html>
     <head>
         <title>Cards fodas</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">!-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" /> 
         <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     </head>
     <body>
-        <div id="card-container">
-            <div class="card card-1">
+        <section id="deck-container">
+            <div class="card">
                 <div class="card-front">
                     <img class="card-image" width=150 height=150 />
                     <p class="translating-word">Apple</p>
@@ -20,7 +21,7 @@
                 </div>
                 
             </div>
-            <div class="card card-1">
+            <div class="card">
                 <div class="card-front">
                     <img class="card-image" width=150 height=150 />
                     <p class="translating-word">Apple</p>
@@ -30,16 +31,20 @@
                 </div>
                 
             </div>
-        </div>
-
-        <form>
-            <label>front input</label>
-            <input id="front-input"></input>
-            <label>back input</label>
-            <input id="back-input"></input>
-        </form>
-
-        <button id="addCard">click me</button>
+        </section>
+        <section id="form">
+                <form class="form-wrapper">
+                    <label class="label-word">Write the word you want to learn</label>
+                    <input class="input-word" id="front-input" placeholder="Books"></input>
+                    <label class="label-word">Write the translation</label>
+                    <input class="input-word" id="back-input" placeholder="Libros"></input>
+                    
+                </form>
+                <button class="button" id="addCard">Practice Deck</button>
+        
+                
+        </section>
+        
         <script src="app.js"></script>
     </body>
 </html>

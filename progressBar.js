@@ -48,10 +48,12 @@ const system = new System('en-pt');//system não deveria ser global e acessível
 const apple = new Word('Maçã', 'Apple');
 const starfruit = new Word('Carambola', 'Starfruit');
 const grape = new Word('Uva', 'Grape');
+const banana = new Word('Banana', 'Banana');
 const appleCard = new Card(apple, 'https://source.unsplash.com/150x150/?apple', system);
 const starfruitCard = new Card(starfruit, 'https://source.unsplash.com/150x150/?starfruit', system);
 const grapeCard = new Card(grape, 'https://source.unsplash.com/150x150/?grape', system);
-const newDeck = new Deck([appleCard, starfruitCard, grapeCard]);
+const bananaCard = new Card(banana, 'https://source.unsplash.com/150x150/?banana', system);
+const newDeck = new Deck([appleCard, starfruitCard, grapeCard, bananaCard]);
 const fruitsLesson = new Lesson('fruits', newDeck);
 let exerciseIndex = 1;
 let barSize = fruitsLesson.exercises.deckCards.length;
@@ -150,7 +152,7 @@ Document.onload = function(){
     const card = document.getElementsByClassName('card');
     updateCardBehaviour(card);
 
-}
+};
 
 //DOM interactions\
 

@@ -98,8 +98,8 @@ card.addEventListener('click', function(){
 document.getElementById('addCard').addEventListener('click', function(){
     const frontInput = document.getElementById('front-input').value;
     const backInput = document.getElementById('back-input').value;
-    const cardContainer = document.getElementById('card-container');
-    cardContainer.innerHTML += `<div class="card card-1">
+    const cardContainer = document.getElementById('deck-container');
+    cardContainer.innerHTML += `<div class="card">
     <div class="card-front">
         <img class="card-image" width=150 height=150 src="https://source.unsplash.com/150x150/?${frontInput}" />
         <p class="translating-word">${frontInput}</p>
